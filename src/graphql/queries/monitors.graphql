@@ -1,0 +1,13 @@
+query getActiveAlerts {
+  activeAlerts {
+    id
+    actorObjectId
+    verb
+    description
+    targetObjectId
+    actionObjectObjectId
+    timestamp
+    public
+    data
+  }
+}
