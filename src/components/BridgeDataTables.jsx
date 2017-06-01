@@ -1,27 +1,15 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { graphql, compose } from 'react-apollo';
 import { Grid, Row } from 'react-flexbox-grid';
 import DataTables from 'material-ui-datatables'
-import TicketsByCategoryQuery from '../graphql/queries/tickets_by_category.graphql';
-import TicketCategories from '../graphql/queries/categories.graphql';
-import CircularProgress from 'material-ui/CircularProgress';
 import TextField from 'material-ui/TextField';
 import {
   Table, TableBody, TableHeader,
   TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 
 class BridgeDataTables extends Component {
-  static propTypes = {
-    columns: PropTypes.array.isRequired,
-    data: PropTypes.array.isRequired,
-    rowsToDisplay: PropTypes.number,
-    rowSizeList: PropTypes.array,
-    handleCellClick: PropTypes.func,
-    router: PropTypes.func,
-    rowLinks: PropTypes.object,
-  }
-
   constructor(props) {
     super(props);
     this.state = {
@@ -189,6 +177,16 @@ class BridgeDataTables extends Component {
       </Grid>
     );
   }
+}
+
+BridgeDataTables.propTypes = {
+  columns: PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
+  rowsToDisplay: PropTypes.number,
+  rowSizeList: PropTypes.array,
+  handleCellClick: PropTypes.func,
+  router: PropTypes.func,
+  rowLinks: PropTypes.object,
 }
 
 export default BridgeDataTables;

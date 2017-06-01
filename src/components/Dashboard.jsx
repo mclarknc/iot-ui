@@ -3,7 +3,6 @@ import { Grid, Row, Col } from 'react-flexbox-grid'
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CartText} from 'material-ui/Card'
 import ActiveAlerts from './ActiveAlerts'
 
-
 class Dashboard extends Component {
   constructor(props) {
     super(props)

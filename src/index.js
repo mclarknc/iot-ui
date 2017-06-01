@@ -17,7 +17,7 @@ import AppBar from 'material-ui/AppBar';
 injectTapEventPlugin();
 
 const graphql_port = process.env.PORT || '443';
-const graphql_uri = 'https://syliant.com:/graphql';
+const graphql_uri = 'https://syliant.com:/x23b34';
 const networkInterface = createNetworkInterface({
     uri: graphql_uri
 });

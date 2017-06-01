@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Dashboard from './Dashboard'
+import Monitors from './Monitors'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
@@ -54,7 +55,10 @@ class App extends React.Component {
             <Col xs={12} md={12}>
               <div style={ margins }>
                 <Router>
-                  <Route path="/dashboard" component={Dashboard} />
+                  <div>
+                    <Route path="/dashboard" component={Dashboard} />
+                    <Route path="/monitors" compnent={Monitors} />
+                  </div>
                 </Router>
               </div>
             </Col>
@@ -72,7 +76,7 @@ class App extends React.Component {
           />
           <Divider />
           <MenuItem key={10} onTouchTap={this.handleClose} href="/#/dashboard">Dashboard</MenuItem>
-          <MenuItem key={11} onTouchTap={this.handleClose} href="/#">All Monitors</MenuItem>
+          <MenuItem key={11} onTouchTap={this.handleClose} href="/#/monitors">All Monitors</MenuItem>
           <MenuItem key={12} onTouchTap={this.handleClose} href="/#">Notifications</MenuItem>
           <MenuItem key={13} onTouchTap={this.handleClose} href="/#">Account Settings</MenuItem>
           <MenuItem key={14} onTouchTap={this.handleClose} href="/#">Company Settings</MenuItem>

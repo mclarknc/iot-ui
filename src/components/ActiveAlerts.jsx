@@ -5,12 +5,13 @@ import moment from 'moment'
 import { List, ListItem } from 'material-ui/List'
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import WarningIcon from 'material-ui/svg-icons/alert/warning'
+import LoadingIndicator from './LoadingIndicator'
 import ActiveAlertsQuery from '../graphql/queries/alerts.graphql'
 
 class ActiveAlerts extends Component {
   render() {
     if ( this.props.data.loading ) {
-      return <h1>Loading...</h1>
+      return <LoadingIndicator message="Fetching active alerts." />
     }
     let alerts = this.props.data.activeAlerts.map( ( alert, idx ) => {
       return (

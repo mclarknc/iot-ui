@@ -1,13 +1,11 @@
-query getActiveAlerts {
-  activeAlerts {
+query getAllMonitors {
+  allMonitors {
     id
-    actorObjectId
-    verb
-    description
-    targetObjectId
-    actionObjectObjectId
-    timestamp
-    public
-    data
+    name
+    model
+    firmware
+    company
+    status
+    lastUpdate
   }
 }
