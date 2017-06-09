@@ -1,0 +1,13 @@
+query getActiveAlerts($id: Int) {
+  activeAlertsByMonitor(id: $id) {
+    id
+    actorObjectId
+    verb
+    description
+    targetObjectId
+    actionObjectObjectId
+    timestamp
+    public
+    data
+  }
+}

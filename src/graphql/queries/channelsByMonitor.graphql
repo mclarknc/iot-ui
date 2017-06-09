@@ -1,0 +1,13 @@
+query getchannelsByMonitor($monitorId: Int) {
+  channelsByMonitor (monitorId: $monitorId){
+    id
+    name
+    channelType {
+      commonName
+      units {
+        name
+        unitImperial
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { graphql, compose } from 'react-apollo';
 import { Grid, Row } from 'react-flexbox-grid';
 import DataTables from 'material-ui-datatables'

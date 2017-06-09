@@ -15,7 +15,9 @@ class Dashboard extends Component {
       <Grid fluid>
         <Row>
           <Col md={12}>
-            <ActiveAlerts />
+            <div style={{ paddingTop: 20 }}>
+              <ActiveAlerts />
+            </div>
           </Col>
         </Row>
       </Grid>

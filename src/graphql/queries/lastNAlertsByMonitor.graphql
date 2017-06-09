@@ -1,0 +1,12 @@
+query getLastNAlerts($id: Int, $num: Int) {
+  lastNAlertsByMonitor(id: $id, num: $num) {
+    id
+    actorObjectId
+    verb
+    description
+    targetObjectId
+    actionObjectObjectId
+    timestamp
+    data
+  }
+}

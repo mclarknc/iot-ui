@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -32,7 +32,7 @@ ReactDOM.render (
   <ApolloProvider client={ client }>
     <MuiThemeProvider muiTheme={ getMuiTheme(lightBaseTheme) }>
       <Router>
-        <Route path="/" component={App} />
+        <App />
       </Router>
     </MuiThemeProvider>
   </ApolloProvider>,

@@ -1,10 +1,18 @@
 query getAllMonitors {
-  allMonitors {
+  allMonitors(activeOnly: true) {
     id
     name
-    model
-    firmware
-    company
+    model {
+      name
+      model
+    }
+    firmware {
+      binName
+      version
+    }
+    company {
+      name
+    }
     status
     lastUpdate
   }

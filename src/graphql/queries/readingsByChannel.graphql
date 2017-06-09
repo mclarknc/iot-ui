@@ -1,0 +1,10 @@
+query getReadingsByChannel($channel: Int, $startDate: String, $endDate: String) {
+  readingDateRange (channel: $channel, startDate: $startDate, endDate: $endDate ){
+    id
+    monitorTime
+    transactionTime
+    finalValue
+    isValid
+    offsetValue
+  }
+}

@@ -1,3 +1,4 @@
 {
-  presets: ['react', 'env']
+  "plugins":[ "babel-plugin-root-import"],
+  "presets": ['react', 'env', 'es2015', 'stage-2']
 }

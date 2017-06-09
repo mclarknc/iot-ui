@@ -1,0 +1,29 @@
+query getMonitor($id: Int) {
+  monitor(id: $id) {
+    id
+    name
+    model {
+      name
+      model
+    }
+    firmware {
+      binName
+      version
+    }
+    company {
+      name
+    }
+    status
+    lastUpdate
+    channelSet {
+      id
+      name
+      isEnabled
+      updateInterval
+      lastReading {
+        monitorTime
+        finalValue
+      }
+    }
+  }
+}
