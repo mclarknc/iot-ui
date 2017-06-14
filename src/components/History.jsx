@@ -18,6 +18,7 @@ class History extends Component {
       let thirtyDaysAgo = moment().subtract(30, 'days').format('YYYY-MM-DDTHH:MM:SS')
       return (
         <HistoryChart
+          key={idx}
           channel={ channel }
           startDate={ thirtyDaysAgo }
           endDate= { now }

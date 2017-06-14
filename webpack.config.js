@@ -26,6 +26,13 @@ module.exports = {
 	    }
 	  ]
   },
+  plugins: [
+      new webpack.DefinePlugin({
+	  'process.env': {
+	      MONITOR_URL: JSON.stringify(process.env.MONITOR_URL)
+	  }
+      })
+  ],
   resolve: {
       extensions: ['*', '.js', '.jsx'],
   },
@@ -38,5 +45,5 @@ module.exports = {
 	  contentBase: './dist',
 	  disableHostCheck: true,
 	  hot: true
-  }
+  },
 }

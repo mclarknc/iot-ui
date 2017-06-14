@@ -17,12 +17,12 @@ import AppBar from 'material-ui/AppBar';
 injectTapEventPlugin();
 
 const graphql_port = process.env.PORT || '443';
-const graphql_uri = 'https://syliant.com:/x23b34';
+const graphql_uri = 'https://' + process.env.MONITOR_URL
+console.log(`Graphql URI: ${graphql_uri}`)
+console.log(`Graphql PORT: ${ graphql_port }`)
 const networkInterface = createNetworkInterface({
     uri: graphql_uri
 });
-
-console.log(`Graphql PORT: ${ graphql_port }`)
 
 const client = new ApolloClient({
     networkInterface: networkInterface

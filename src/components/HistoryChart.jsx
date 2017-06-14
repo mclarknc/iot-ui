@@ -16,9 +16,6 @@ import { Group } from '@vx/group'
 import { LinearGradient } from '@vx/gradient'
 
 class HistoryChart extends Component {
-  foo = (bar) => {
-    console.log(bar)
-  }
   makeChart = (chartData, yLab, invert=false) => {
     const data = chartData
     const width=1250
@@ -84,7 +81,6 @@ class HistoryChart extends Component {
     )
   }
   render() {
-    console.log(this.props)
     let { loading, readingDateRange } = this.props.channelReadingsQuery
     if ( loading ) {
       return <LoadingIndicator message="Loading chart" />
