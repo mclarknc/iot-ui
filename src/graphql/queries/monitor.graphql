@@ -14,6 +14,8 @@ query getMonitor($id: Int) {
       name
     }
     status
+    latitude
+    longitude
     lastUpdate
     channelSet {
       id

@@ -6,6 +6,7 @@ import LoadingIndicator from './LoadingIndicator'
 import monitorQuery from '../graphql/queries/monitor.graphql'
 import MonitorDetail from './MonitorDetail'
 import History from './History'
+import Settings from './Settings'
 
 class Monitor extends Component {
   render() {
@@ -32,7 +33,9 @@ class Monitor extends Component {
           </div>
         </Tab>
         <Tab label="Settings" style={{backgroundColor: 'rgb(0, 151, 167)'}}>
-          <h4>Settings Component goes here</h4>
+          <div style={{ width: '100%', paddingLeft: 30, paddingTop: 20}}>
+            < Settings monitor={ monitor } />
+          </div>
         </Tab>
       </Tabs>
     </Grid>

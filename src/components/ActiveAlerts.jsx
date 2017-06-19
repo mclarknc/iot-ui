@@ -38,7 +38,10 @@ class ActiveAlerts extends Component {
         return
       }
       return (
-        <Link to={ "/monitor/" + alert.targetObjectId} style={{ textDecoration: 'none', color: '#000'}}>
+        <Link
+          key={idx}
+          to={ "/monitor/" + alert.targetObjectId}
+          style={{ textDecoration: 'none', color: '#000'}}>
         <ListItem key={idx}
           primaryText={ moment(alert.timestamp).format('MMM Do (H:mm a)')}
           secondaryText={ this.state.monitors[alert.targetObjectId]  + ' ' +  alert.verb }
