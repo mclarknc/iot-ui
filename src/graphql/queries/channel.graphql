@@ -1,5 +1,5 @@
-query getchannelsByMonitor($monitorId: Int) {
-  channelsByMonitor (monitorId: $monitorId){
+query getchannel($id: Int) {
+  channel (id: $id){
     id
     name
     channelType {
@@ -10,5 +10,7 @@ query getchannelsByMonitor($monitorId: Int) {
       }
     }
     updateInterval
+    offsetValue
+    displayTemplateName
   }
 }

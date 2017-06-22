@@ -1,0 +1,9 @@
+query getRulesByChannel($id: Int) {
+  rulesByChannel (id: $id){
+    id
+    name
+    lowerThreshold
+    upperThreshold
+    state
+  }
+}

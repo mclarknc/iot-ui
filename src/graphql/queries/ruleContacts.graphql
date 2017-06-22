@@ -1,0 +1,10 @@
+query getRulesContacts($id: Int) {
+  ruleContacts (id: $id){
+    id
+    firstName
+    lastName
+    company {
+      name
+    }
+  }
+}

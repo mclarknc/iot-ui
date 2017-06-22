@@ -17,7 +17,7 @@ class Monitor extends Component {
     return (
       <Grid style={{ paddingLeft: '0rem', paddingRight: '0rem'}} fluid>
         <Row style={{marginLeft: -30, marginRight: -32, marginTop: 0, color: 'white', backgroundColor: 'rgb(0, 151, 167)', padding: 20, fontSize: 'x-large'}}>
-          <Col md={12}>{ monitor.name } Details</Col>
+          <Col md={12}><span style={{fontWeight: 300}}>{ monitor.name } Details</span></Col>
         </Row>
       <Tabs style={{ marginLeft: -30, marginRight: -32, marginTop: -8, width: 'auto'}}>
         <Tab label="Current Status" style={{backgroundColor: 'rgb(0, 151, 167)'}}>
@@ -34,7 +34,7 @@ class Monitor extends Component {
         </Tab>
         <Tab label="Settings" style={{backgroundColor: 'rgb(0, 151, 167)'}}>
           <div style={{ width: '100%', paddingLeft: 30, paddingTop: 20}}>
-            < Settings monitor={ monitor } />
+            < Settings monitor={ monitor } history= { this.props.history }/>
           </div>
         </Tab>
       </Tabs>

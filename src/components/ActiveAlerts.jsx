@@ -33,28 +33,32 @@ class ActiveAlerts extends Component {
     if ( this.props.activeAlertsQuery.loading || this.props.monitorsQuery.loading ) {
       return <LoadingIndicator message="Fetching active alerts." />
     }
-    let alerts = this.props.activeAlertsQuery.activeAlerts.map( ( alert, idx ) => {
+    let alerts = []
+    for (let i = 0; i < this.props.activeAlertsQuery.activeAlerts.length; i++) {
+      alert = this.props.activeAlertsQuery.activeAlerts[i]
       if ( !this.state.monitors[alert.targetObjectId] ) {
-        return
+        continue
       }
-      return (
+      alerts.push(
         <Link
-          key={idx}
+          key={i}
           to={ "/monitor/" + alert.targetObjectId}
           style={{ textDecoration: 'none', color: '#000'}}>
-        <ListItem key={idx}
+        <ListItem key={i}
           primaryText={ moment(alert.timestamp).format('MMM Do (H:mm a)')}
           secondaryText={ this.state.monitors[alert.targetObjectId]  + ' ' +  alert.verb }
           leftIcon={<WarningIcon color='red' />}
         />
       </Link>
       )
-    })
+    }
+    console.log(alerts)
     return (
       <Card>
         <CardTitle
           title='Active alerts'
-          subtitle={ this.props.activeAlertsQuery.activeAlerts.length + ' active alerts.'} />
+          subtitle={ alerts.length + ' active alerts.'}
+          titleStyle={{fontWeight: 300}} />
         <CardText>
           { alerts }
         </CardText>

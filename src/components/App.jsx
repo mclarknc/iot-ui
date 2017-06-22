@@ -1,8 +1,10 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Dashboard from './Dashboard'
 import Monitors from './Monitors'
 import Monitor from './Monitor'
+import Channel from './Channel'
+import Rule from './Rule'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
@@ -58,6 +60,8 @@ class App extends React.Component {
                   <Route path="/dashboard" component={Dashboard} />
                   <Route path="/monitors" component={Monitors} />
                   <Route path="/monitor/:id" component={Monitor} />
+                  <Route path="/channel/:monitor/:id" component={Channel} />
+                  <Route path="/rule/:id" component={Rule} />
                 </Switch>
               </div>
             </Col>

@@ -111,7 +111,7 @@ class Monitors extends Component {
       <Grid fluid>
         <Row>
           <Col md={12}>
-            <h3>{ this.state.results.length } Active Monitors</h3>
+            <h3 style={{fontWeight: 300}}>{ this.state.results.length } Active Monitors</h3>
           </Col>
         </Row>
         <Row>

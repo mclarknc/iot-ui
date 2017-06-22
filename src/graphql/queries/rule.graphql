@@ -1,0 +1,9 @@
+query getRule($id: Int) {
+  rule (id: $id){
+    id
+    name
+    lowerThreshold
+    upperThreshold
+    state
+  }
+}

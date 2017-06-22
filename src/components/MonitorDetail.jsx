@@ -9,7 +9,6 @@ import LoadingIndicator from './LoadingIndicator'
 import RecentEvents from './RecentEvents'
 
 // material-ui imports
-import { Tabs, Tab } from 'material-ui/Tabs'
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import { List, ListItem } from 'material-ui/List'
 import WarningIcon from 'material-ui/svg-icons/alert/warning'
@@ -52,6 +51,7 @@ class MonitorDetail extends Component {
                 Last Reading: { chan.lastReading.finalValue } <br />
                 Updating every { chan.updateInterval/60 } minutes
               </p>}
+            disabled={ true }
           />
       )
     })
@@ -116,10 +116,12 @@ class MonitorDetail extends Component {
                     <ListItem key={1}
                       primaryText="Model"
                       secondaryText={ monitor.model.name + " (" + monitor.model.model + ")"}
+                      disabled={ true }
                     />
                     <ListItem key={2}
                       primaryText="Firmware"
                       secondaryText={monitor.firmware.version}
+                      disabled={ true }
                     />
                   </List>
                 </Col>
@@ -128,6 +130,7 @@ class MonitorDetail extends Component {
                     <ListItem key={1}
                       primaryText="Company"
                       secondaryText={monitor.company.name}
+                      disabled={ true }
                     />
                   </List>
                 </Col>

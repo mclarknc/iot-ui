@@ -97,7 +97,7 @@ class HistoryChart extends Component {
       <Grid style={{ paddingLeft: '0rem', paddingRight: '0rem'}} fluid>
         <Row>
           <Col sm={12}>
-            <h3>{ this.props.channel.name }</h3>
+            <h3 style={{fontWeight: 300}}>{ this.props.channel.name }</h3>
           </Col>
         </Row>
         <Row>
